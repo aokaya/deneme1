@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 9-b456138dc4bc
+Exec   : simpleFoam
+Date   : Mar 25 2022
+Time   : 23:53:22
+Host   : "DESKTOP-LJCG9PF"
+PID    : 1687
+I/O    : uncollated
+Case   : /home/aokaya/openfoamv9/off/stator
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: No convergence criteria found
+
+Reading field p
+
+AMI: Creating addressing and weights between 1524 source faces and 1966 target faces
+AMI: Patch source sum(weights) min/max/average = 0.507756, 1.53864, 0.990241
+AMI: Patch target sum(weights) min/max/average = 0, 1.98544, 0.981448
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+bounding k, min: 0 max: 0.0459375 average: 0.0459375
+bounding omega, min: 0 max: 4593.75 average: 4593.75
+RAS
+{
+    RASModel        kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+}
+
+Creating MRF zone list from MRFProperties
+    creating MRF zone: MRF1
+No fvModels present
+No fvConstraints present
+
+Starting time loop
+
+Time = 1
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 0.00810764, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.00929866, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 0.0114481, No Iterations 4

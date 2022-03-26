@@ -1,0 +1,5 @@
+help
+cellZoneSet rotor mew setToCellZone region1
+cellZoneSet rotor mew setsToCellZone region1
+cellZoneSet rotor new setToCellZone region1
+quit
